@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Machine Learning Engineer</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <!-- Add navigation links with corresponding anchor links -->
+        <a href="#introduction">Introduction</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="mypic2.jpg" alt="Introduction Image">
+                </div>
+                <div class="grid-item description">
+                    <!-- Content for the introduction section -->
+                    <h2>Introduction</h2>
+                     <p>
+            Hi, I'm Mahamoud Abdoulaye Doucoure, a passionate machine learning engineer with a keen interest in leveraging artificial intelligence to solve complex problems. My journey in the world of machine learning began with a fascination for the intersection of data and innovation.
+        </p>
+        <p>
+            Equipped with a solid foundation in computer science and a love for cutting-edge technologies, I am committed to pushing the boundaries of what's possible in the field of machine learning. From developing intelligent algorithms to exploring the potential of deep learning, I thrive on the challenges that come with transforming data into actionable insights.
+        </p>
+        <p>
+            As an enthusiastic learner and a dedicated professional, I am excited to contribute my skills and expertise to projects that drive innovation and make a positive impact. Explore my portfolio to learn more about my journey and the exciting projects I've had the privilege to be a part of.
+        </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="grid-container">
+                
+                <div class="grid-item description">
+                    <!-- Content for the about me section -->
+                    <h2>About Me</h2>
+                    <p>Your about me content goes here.</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="mypic.jpg" alt="About Me Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        
+
+
+    </div>
+
+    <!-- Your existing HTML content for other sections -->
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

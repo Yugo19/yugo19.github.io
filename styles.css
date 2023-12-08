@@ -1,0 +1,89 @@
+/* Global Styles */
+body {
+    margin-top: 20px;
+    padding: 0;
+    background-color: white; /* Add the path to your background image */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    text-align: center;
+    z-index: 2; /* Ensure the navigation is on top of the sections */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Section Styles */
+.page-content {
+    margin-top: 60px; /* Adjust the margin to push content below the fixed navigation bar */
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.grid-item.description {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px; /* Increased padding for more emphasis */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    font-family: 'Roboto', sans-serif; /* Use a machine learning-themed font */
+    text-align: left; /* Align text to the left for better readability */
+    line-height: 1.6; /* Improved line height for better spacing */
+    margin-bottom: 10px; /* Gap between sections */
+}
+
+.grid-item.description h2 {
+    color: #fff; /* White color for the heading */
+    font-size: 2.5em; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.grid-item.description p {
+    color: #ccc; /* Light gray color for paragraphs */
+    font-size: 1.2em; /* Larger font size for paragraphs */
+}
+
+/* Your existing styles for other sections */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens if needed */
+    nav {
+        background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for better visibility on small screens */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
