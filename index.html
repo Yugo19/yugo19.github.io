@@ -16,7 +16,6 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -32,15 +31,7 @@
                 <div class="grid-item description">
                     <!-- Content for the introduction section -->
                     <h2>Introduction</h2>
-                     <p>
-            Hi, I'm Mahamoud Abdoulaye Doucouré, a passionate machine learning engineer with a keen interest in leveraging artificial intelligence to solve complex problems. My journey in the world of machine learning began with a fascination for the intersection of data and innovation.
-        </p>
-        <p>
-            Equipped with a solid foundation in computer science and a love for cutting-edge technologies, I am committed to pushing the boundaries of what's possible in the field of machine learning. From developing intelligent algorithms to exploring the potential of deep learning, I thrive on the challenges that come with transforming data into actionable insights.
-        </p>
-        <p>
-            As an enthusiastic learner and a dedicated professional, I am excited to contribute my skills and expertise to projects that drive innovation and make a positive impact. Explore my portfolio to learn more about my journey and the exciting projects I've had the privilege to be a part of.
-        </p>
+                     <p id="intro-text"></p>
                 </div>
             </div>
         </section>
@@ -52,7 +43,7 @@
                 <div class="grid-item description">
                     <!-- Content for the about me section -->
                     <h2>About Me</h2>
-                    <p>Your about me content goes here.</p>
+                    <p id="about-text"></p>
                 </div>
 
                 <div class="grid-item">
@@ -80,6 +71,73 @@
                 });
             });
         });
+
+        // JavaScript for typewriter effect
+    const aboutText = document.getElementById('about-text');
+    const texts = [
+        "I am a machine learning enthusiast with a passion for...",
+        "Inquisitive about the limitless possibilities of AI...",
+        "Dedicated to pushing the boundaries of data-driven solutions...",
+        "Let's explore the exciting world of machine learning together!"
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter() {
+        if (charIndex < texts[textIndex].length) {
+            aboutText.innerHTML += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 50); // Adjust the typing speed (milliseconds)
+        } else {
+            setTimeout(eraseText, 1000); // Wait for a moment before erasing
+        }
+    }
+
+    function eraseText() {
+        if (charIndex > 0) {
+            aboutText.innerHTML = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseText, 30); // Adjust the erasing speed (milliseconds)
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeWriter, 500); // Wait before typing the next text
+        }
+    }
+
+
+     // JavaScript for typing paragraphs in the Introduction section
+    const introText = document.getElementById('intro-text');
+    const paragraphs = [
+        "Hi, I'm Mahamoud Abdoulaye Doucouré, a passionate machine learning engineer with a keen interest in leveraging artificial intelligence to solve complex problems.",
+        "My journey in the world of machine learning began with a fascination for the intersection of data and innovation.",
+        "Equipped with a solid foundation in computer science and a love for cutting-edge technologies, I am committed to pushing the boundaries of what's possible in the field of machine learning.",
+        "From developing intelligent algorithms to exploring the potential of deep learning, I thrive on the challenges that come with transforming data into actionable insights.",
+        "As an enthusiastic learner and a dedicated professional, I am excited to contribute my skills and expertise to projects that drive innovation and make a positive impact.",
+        "Explore my portfolio to learn more about my journey and the exciting projects I've had the privilege to be a part of."
+    ];
+    let paragraphIndex = 0;
+    let charIndex1 = 0;
+
+    function typeParagraph() {
+        if (charIndex1 < paragraphs[paragraphIndex].length) {
+            introText.innerHTML += paragraphs[paragraphIndex].charAt(charIndex1);
+            charIndex1++;
+            setTimeout(typeParagraph, 10); // Adjust the typing speed (milliseconds)
+        } else {
+            introText.innerHTML += '<br><br>'; // Add line breaks between paragraphs
+            charIndex1 = 0;
+            paragraphIndex++;
+            if (paragraphIndex < paragraphs.length) {
+                setTimeout(typeParagraph, 50); // Wait before typing the next paragraph
+            }
+        }
+    }
+
+    // Start the typing animation
+    typeParagraph();
+
+    // Start the typing animation
+    typeWriter();
     </script>
 
 </body>
